@@ -1,7 +1,15 @@
 body {
-    background-color: bisque;
+    background-color: rgb(210, 201, 190);
 }
 
 .card {
     height: 25rem;
+    margin-bottom: 2rem;
+}
+
+.cardContainer {
+    border-radius: 20px;
+    overflow: hidden;
+    height: 25rem;
+    margin-bottom: 2rem;
 }

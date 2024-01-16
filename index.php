@@ -16,35 +16,51 @@ require_once __DIR__ . '/data.php';
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <h2 class="mb-5">Prodotti</h2>
+    <div class="container mb-5">
+        <div class="row text-center">
+            <h1 class="my-5">Prodotti</h1>
         </div>
         <div class="row">
+
+            <!-- ciclo card  -->
             <?php foreach ($prodotti as $prodotto) : ?>
                 <div class="col-3">
-                    <div class="card mb-3 overflow-y-auto">
-                        <img src="<?= $prodotto->imgUrl ?>" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                <?= $prodotto->name ?>
-                            </h5>
-                            <h6 class="card-subtitle mb-2 text-muted">
-                                <?= $prodotto->category . ", " . get_class($prodotto) ?>
-                                <?php if ($prodotto->category == 'cane') {
-                                    echo '<i class="fa-solid fa-dog"></i>';
-                                } ?>
-                                <?php if ($prodotto->category == 'gatto') {
-                                    echo '<i class="fa-solid fa-cat"></i>';
-                                }; ?>
-                            </h6>
-                            Prezzo: <?= $prodotto->price . " €" ?> <br>
-                            Disponibilità: <?= $prodotto->availability ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-x"></i>' ?><br>
-                            <?= (isset($prodotto->color)) ? "Colore: " . $prodotto->color : "" ?>
-                            Peso: <?= $prodotto->weight . " kg" ?>
 
-                            <!-- descrizione prodotto da aggiungere  -->
+                    <!-- inizio card  -->
+                    <div class="cardContainer">
+
+                        <div class="card rounded overflow-y-auto">
+
+                            <!-- immagine card  -->
+                            <img src="<?= $prodotto->imgUrl ?>" class="card-img-top" alt="...">
+                            <div class="card-body">
+
+                                <!-- titolo  -->
+                                <h5 class="card-title">
+                                    <?= $prodotto->name ?>
+                                </h5>
+
+                                <!-- sottotitolo  -->
+                                <h6 class="card-subtitle mb-2 text-muted">
+                                    <?= $prodotto->category->name . ", " . get_class($prodotto) ?>
+                                    <?php if ($prodotto->category->name == 'cane') {
+                                        echo '<i class="fa-solid fa-dog"></i>';
+                                    } ?>
+                                    <?php if ($prodotto->category->name == 'gatto') {
+                                        echo '<i class="fa-solid fa-cat"></i>';
+                                    }; ?>
+                                    <br>
+                                    <?= $prodotto->category->description ?>
+                                </h6>
+                                Prezzo: <?= $prodotto->price . " €" ?> <br>
+                                Disponibilità: <?= $prodotto->availability ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-solid fa-x"></i>' ?><br>
+                                Colore: <?= (isset($prodotto->color)) ? $prodotto->color : "/" ?><br>
+                                Peso: <?= $prodotto->weight . " kg" ?>
+
+                                <!-- descrizione prodotto da aggiungere  -->
+                            </div>
                         </div>
+
                     </div>
                 </div>
             <?php endforeach; ?>
