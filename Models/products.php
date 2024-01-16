@@ -17,3 +17,8 @@ class Products
         $this->imgUrl = $imgUrl;
     }
 }
+trait material_spec
+{
+    public $color;
+    public $material;
+}

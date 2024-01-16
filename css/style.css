@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(210, 201, 190);
+    background-color: rgb(68, 120, 234);
 }
 
 .card {
@@ -7,9 +7,18 @@ body {
     margin-bottom: 2rem;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .cardContainer {
     border-radius: 20px;
     overflow: hidden;
     height: 25rem;
     margin-bottom: 2rem;
+    border: solid 1px black;
+}
+
+img {
+    aspect-ratio: 1;
 }

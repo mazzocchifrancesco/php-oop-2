@@ -1,8 +1,8 @@
 <?php
 
-require_once __DIR__ . '/products.php';
+require_once __DIR__ . '/Products.php';
 
-class Cuccia extends Products
+class Beds extends Products
 {
     public $size;
     public $color;

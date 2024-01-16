@@ -1,6 +1,7 @@
 <?php
 
 require_once __DIR__ . '/data.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -43,10 +44,10 @@ require_once __DIR__ . '/data.php';
                                 <!-- sottotitolo  -->
                                 <h6 class="card-subtitle mb-2 text-muted">
                                     <?= $prodotto->category->name . ", " . get_class($prodotto) ?>
-                                    <?php if ($prodotto->category->name == 'cane') {
+                                    <?php if ($prodotto->category->name == 'Dog') {
                                         echo '<i class="fa-solid fa-dog"></i>';
                                     } ?>
-                                    <?php if ($prodotto->category->name == 'gatto') {
+                                    <?php if ($prodotto->category->name == 'Cat') {
                                         echo '<i class="fa-solid fa-cat"></i>';
                                     }; ?>
                                     <br>
