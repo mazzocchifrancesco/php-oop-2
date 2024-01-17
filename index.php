@@ -16,7 +16,10 @@
     <div class="container mb-5">
         <div class="row text-center my-5">
             <h1 class="mb-3">Prodotti</h1>
+            <!-- stampo totale carrello -->
             <h3>Totale Carrello: <?= $clients[0]->getTotalToPay($cart) . ' €'; ?></h3>
+            <!-- prova -->
+            <?= $todayDate = date("Y/m/d"); ?>
         </div>
         <div class="row">
 

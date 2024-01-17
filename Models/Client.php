@@ -12,7 +12,7 @@ class Client
     public $client_psw;
 
 
-    public function __construct($name, $surname, $age, $creditCard, $address, $registered, $client_id, $client_psw)
+    public function __construct($name, $surname, $age, CreditCard $creditCard, $address, $registered, $client_id, $client_psw)
     {
         $this->name = $name;
         $this->surname = $surname;

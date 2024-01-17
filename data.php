@@ -5,13 +5,15 @@ require_once __DIR__ . '/Models/Beds.php';
 require_once __DIR__ . '/Models/Toys.php';
 require_once __DIR__ . '/Models/Category.php';
 require_once __DIR__ . '/Models/Client.php';
+require_once __DIR__ . '/Models/CreditCard.php';
+
 
 
 
 $dog = new Category('Dog', 'prodotti per il tuo cane');
 $cat = new Category('Cat', 'prodotti per il tuo gatto');
 
-
+//array prodotti in database
 $prodotti = [
     new Food(
         'crocchette premium',
@@ -79,16 +81,22 @@ $prodotti = [
     )
 ];
 
+//ARRAY CLIENTI
+//todo aggiungere cliente corrente
+
 $clients = [
     new Client(
         'francesco',
         'guccini',
         83,
-        54565455454,
+        new CreditCard(5465454589632548, 586, '2022/05/21'),
         'Via Paolo Fabbri 43',
         true,
         'guccio40',
         'avvelenato123+'
     )
 ];
+
+//ARRAY prodotti in carrello
+
 $cart = [5, 6, 7, 8, 9, 10];
