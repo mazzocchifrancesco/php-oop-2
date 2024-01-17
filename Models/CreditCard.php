@@ -11,16 +11,16 @@ class CreditCard
     public function __construct(int $number, int $cvv, $expDate)
     {
         $timestamp = strtotime($expDate);
-        $formattedDate = getdate($timestamp);
-
         $todayDate = date("Y/m/d");
-        if ($formattedDate >= $todayDate) {
+        $todayTimestamp = strtotime($todayDate);
+
+        if ($timestamp >= $todayTimestamp) {
 
             $this->number = $number;
             $this->cvv = $cvv;
             $this->expDate = $expDate;
         } else {
-            throw new Exception('expired Credit Card');
+            throw new Exception('+++ expired Credit Card +++');
         }
     }
 }

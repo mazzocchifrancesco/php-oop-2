@@ -19,7 +19,9 @@
             <!-- stampo totale carrello -->
             <h3>Totale Carrello: <?= $clients[0]->getTotalToPay($cart) . ' €'; ?></h3>
             <!-- prova -->
-            <?= $todayDate = date("Y/m/d"); ?>
+            <span>Data di oggi: <?= $todayDate = date("Y/m/d"); ?></span>
+            <span>Scadenza carta di credito Cliente: <?= $clients[0]->creditCard->expDate; ?></span>
+
         </div>
         <div class="row">
 

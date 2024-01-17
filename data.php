@@ -89,7 +89,7 @@ $clients = [
         'francesco',
         'guccini',
         83,
-        new CreditCard(5465454589632548, 586, '2022/05/21'),
+        new CreditCard(5465454589632548, 586, '2025/01/17'),
         'Via Paolo Fabbri 43',
         true,
         'guccio40',
