@@ -1,9 +1,4 @@
-<?php
-
-require_once __DIR__ . '/data.php';
-
-var_dump($prodotti[2]);
-?>
+<?php require_once __DIR__ . '/data.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,8 +14,9 @@ var_dump($prodotti[2]);
 
 <body>
     <div class="container mb-5">
-        <div class="row text-center">
-            <h1 class="my-5">Prodotti</h1>
+        <div class="row text-center my-5">
+            <h1 class="mb-3">Prodotti</h1>
+            <h3>Totale Carrello: <?= $clients[0]->getTotalToPay($cart) . ' €'; ?></h3>
         </div>
         <div class="row">
 

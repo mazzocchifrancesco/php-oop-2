@@ -78,3 +78,17 @@ $prodotti = [
         0.5
     )
 ];
+
+$clients = [
+    new Client(
+        'francesco',
+        'guccini',
+        83,
+        54565455454,
+        'Via Paolo Fabbri 43',
+        true,
+        'guccio40',
+        'avvelenato123+'
+    )
+];
+$cart = [5, 6, 7, 8, 9, 10];
