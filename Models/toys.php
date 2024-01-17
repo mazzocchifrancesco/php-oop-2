@@ -5,9 +5,9 @@ require_once __DIR__ . '/Products.php';
 class Toys extends Products
 {
     public $size;
-    public $material;
-    public $color;
     public $weight;
+
+    use material_spec;
 
 
     public function __construct($name, $price, $category, $availability, $imgUrl, $size, $material, $color, $weight)

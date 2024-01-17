@@ -31,6 +31,7 @@ $prodotti = [
         'https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/251962edb7de5760e0b55659df48bbfe.jpg?imageView2/2/w/800/q/70',
         50,
         'arancione',
+        'poliestere',
         1.5
     ),
     new Toys(
@@ -62,6 +63,7 @@ $prodotti = [
         'https://shop-cdn-m.mediazs.com/bilder/prezzo/speciale/letto/princess/5/400/58202_PLA_Kuschelbett_Princess_FG_DSC3032_5.jpg',
         25,
         'rosa',
+        'poliestere',
         1
     ),
     new Toys(
